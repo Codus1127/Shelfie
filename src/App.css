@@ -1,33 +1,70 @@
-.App {
-  text-align: center;
+.header {
+  background: #D34735;
+  height: 13vh;
+  width: 100vw;
+  color: white;
+  display: flex; 
+  align-items: center;
+  margin: 0 0 5vh 0;
+  padding-left: 5vw;
+  font-size: 2rem;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.shelfie-logo {
+  height: 5vh;
+  width: auto;
+  margin-left: 3vw;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flexin {
+  display: flex;
+  flex-direction: row;
+}
+.dashboard {
+  width: 50vw;
+  height: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.form {
+  width: 50vw;
+  height: auto;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* align-items: center; */
 }
-
-.App-link {
-  color: #61dafb;
+.green-box {
+  height: 70vh;
+  width: 60vh;
+  background: #3AD886;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3vh;
+  border: solid black 2px;
+  border-radius: 10%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.no-image {
+  height: 20vh;
+  width: auto;
+}
+.inventoryItems {
+  background: #D34735;
+  height: auto;
+  width: 40vw;
+  border: solid black 2px;
+  margin: 3vh 0 0 0;
+}
+.flexinInven {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* margin-left: 10%; */
+}
+.image {
+  height: auto;
+  width: 25vw;
+  display: flex;
+  margin-top: 5%;
+  margin-left: 18%;
 }

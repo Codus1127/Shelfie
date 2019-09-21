@@ -1,35 +1,36 @@
-import React, {Component} from 'react';
+import React from 'react';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header'
-import Product from './components/Product/Product'
 import Dashboard from './components/Dashboard/Dashboard'
 import Form from './components/Form/Form'
 import axios from 'axios'
 
-class App extends Component() {
+class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
 
-  state = {
-   products: []
+    }
   }
 
-  componentDidMount(){
-    axios.get("/api/products").then((products)=> {
-      this.setState({products: products.data})
-    })
-  }
+
 
   render() {
 
     return (
       <div className="App">
         <Header />
-        <Product />
-        <Dashboard />
-        <Form />
+        <Switch>
+          <Route exact path='/' component={Dashboard} />
+          <Route path='/add' component={Form} />
+          <Route path='/edit/:id' component={Form} />
+        </Switch>
+
 
       </div>
     )
   };
 }
 
-export default App;
+export default withRouter (App);
